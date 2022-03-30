@@ -1,0 +1,13 @@
+digraph {
+  graph [bgcolor="#ffffff" pad=0.5 ratio="fill"]
+  "geoserver" [shape="component"]
+  "./data/geoserver/data_dir/" [shape="folder"]
+  8080 [shape="circle"]
+  "wmsclient" [shape="component"]
+  "./data/nginx/html" [shape="folder"]
+  80 [shape="circle"]
+  "./data/geoserver/data_dir/" -> "geoserver" [style="dashed" label="/var/local/geoserver" dir="both"]
+  8080 -> "geoserver" [style="solid"]
+  "./data/nginx/html" -> "wmsclient" [style="dashed" label="/usr/share/nginx/html" dir="both"]
+  80 -> "wmsclient" [style="solid"]
+}

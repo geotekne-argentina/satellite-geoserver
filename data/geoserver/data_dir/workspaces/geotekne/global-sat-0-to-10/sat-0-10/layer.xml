@@ -1,0 +1,15 @@
+<layer>
+  <name>sat-0-10</name>
+  <id>LayerInfoImpl--43073000:17c13d115dd:-7d83</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-6fb4c378:17c28b03984:-7a9e</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--43073000:17c13d115dd:-7d84</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

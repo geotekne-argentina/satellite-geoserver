@@ -1,0 +1,28 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--43073000:17c13d115dd:-66e6</id>
+  <name>satellite-local</name>
+  <mode>SINGLE</mode>
+  <title>satellite-local</title>
+  <workspace>
+    <id>WorkspaceInfoImpl--2e782093:17112b62ada:-7fff</id>
+  </workspace>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--43073000:17c13d115dd:-7d83</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--43073000:17c13d115dd:-6c40</id>
+    </published>
+  </publishables>
+  <styles>
+    <style/>
+    <style/>
+  </styles>
+  <bounds>
+    <minx>-2.0037508342789244E7</minx>
+    <maxx>2.0037508342789244E7</maxx>
+    <miny>-2.0037508342789244E7</miny>
+    <maxy>2.0037508342789244E7</maxy>
+    <crs class="projected">EPSG:3857</crs>
+  </bounds>
+</layerGroup>

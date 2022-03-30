@@ -1,0 +1,117 @@
+<coverage>
+  <id>CoverageInfoImpl--43073000:17c13d115dd:-7d84</id>
+  <name>sat-0-10</name>
+  <nativeName>z10</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--2e782093:17112b62ada:-7ffe</id>
+  </namespace>
+  <title>Satellite 0-10</title>
+  <description>Generated from GeoPackage (mosaic)</description>
+  <abstract>Global layer for zoom levels 0 to 10 using local datastore created using tiles from:&#xd;
+Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2020)</abstract>
+  <keywords>
+    <string>WCS</string>
+    <string>GeoPackage (mosaic)</string>
+  </keywords>
+  <dataLinks>
+    <org.geoserver.catalog.impl.DataLinkInfoImpl>
+      <type>text/plain</type>
+      <content>https://s2maps.eu</content>
+    </org.geoserver.catalog.impl.DataLinkInfoImpl>
+  </dataLinks>
+  <nativeCRS class="projected">PROJCS[&quot;WGS 84 / Pseudo-Mercator&quot;, 
+  GEOGCS[&quot;WGS 84&quot;, 
+    DATUM[&quot;World Geodetic System 1984&quot;, 
+      SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]], 
+  PROJECTION[&quot;Popular Visualisation Pseudo Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;1024&quot;]], 
+  PARAMETER[&quot;semi_minor&quot;, 6378137.0], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], 
+  PARAMETER[&quot;central_meridian&quot;, 0.0], 
+  PARAMETER[&quot;scale_factor&quot;, 1.0], 
+  PARAMETER[&quot;false_easting&quot;, 0.0], 
+  PARAMETER[&quot;false_northing&quot;, 0.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;3857&quot;]]</nativeCRS>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-2.0037508342789244E7</minx>
+    <maxx>2.0037508342789244E7</maxx>
+    <miny>-2.0037508342789244E7</miny>
+    <maxy>2.0037508342789244E7</maxy>
+    <crs class="projected">EPSG:3857</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-180.00000000000003</minx>
+    <maxx>180.00000000000003</maxx>
+    <miny>-85.0511287798066</miny>
+    <maxy>85.0511287798066</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>REPROJECT_TO_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+    <entry key="dirName">z10gpkg_eox_cache_webmercator</entry>
+  </metadata>
+  <store class="coverageStore">
+    <id>CoverageStoreInfoImpl--43073000:17c13d115dd:-7d85</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <nativeFormat>GeoPackage (mosaic)</nativeFormat>
+  <grid dimension="2">
+    <range>
+      <low>0 0</low>
+      <high>134217728 134217728</high>
+    </range>
+    <transform>
+      <scaleX>0.29858214173896974</scaleX>
+      <scaleY>-0.29858214173896974</scaleY>
+      <shearX>0.0</shearX>
+      <shearY>0.0</shearY>
+      <translateX>-2.0037508193498172E7</translateX>
+      <translateY>2.0037508193498172E7</translateY>
+    </transform>
+    <crs>EPSG:3857</crs>
+  </grid>
+  <supportedFormats>
+    <string>GEOTIFF</string>
+    <string>GIF</string>
+    <string>PNG</string>
+    <string>JPEG</string>
+    <string>TIFF</string>
+  </supportedFormats>
+  <interpolationMethods>
+    <string>nearest neighbor</string>
+    <string>bilinear</string>
+    <string>bicubic</string>
+  </interpolationMethods>
+  <defaultInterpolationMethod>nearest neighbor</defaultInterpolationMethod>
+  <dimensions>
+    <coverageDimension>
+      <name>eox_cache_webmercator</name>
+      <description>GridSampleDimension[0.0,1.0]</description>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <dimensionType>
+        <name>UNSIGNED_1BIT</name>
+      </dimensionType>
+    </coverageDimension>
+  </dimensions>
+  <requestSRS>
+    <string>EPSG:3857</string>
+  </requestSRS>
+  <responseSRS>
+    <string>EPSG:3857</string>
+  </responseSRS>
+  <nativeCoverageName>eox_cache_webmercator</nativeCoverageName>
+</coverage>

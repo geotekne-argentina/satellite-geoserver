@@ -1,0 +1,11 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl--43073000:17c13d115dd:-7d85</id>
+  <name>global-sat-0-to-10</name>
+  <type>GeoPackage (mosaic)</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--2e782093:17112b62ada:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <url>file:coverages/gpkg/global-0-10.gpkg</url>
+</coverageStore>

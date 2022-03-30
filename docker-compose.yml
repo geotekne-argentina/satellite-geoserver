@@ -1,0 +1,23 @@
+version: '3'
+services:
+  
+  geoserver:
+    image: 'geotekne/geoserver:pear-alpine-2.16.2'
+    hostname: geoserver
+    env_file:
+      - ./geoserver.env
+    ports:
+      - "8080:8080"
+    volumes:
+      - './data/geoserver/data_dir/:/var/local/geoserver'
+    restart: on-failure
+
+  wmsclient:
+    image: 'nginx:1.21.3-alpine'
+    hostname: wmsclient
+    volumes:
+      - './data/nginx/html:/usr/share/nginx/html'
+    ports:
+      - "80:80"
+    restart: on-failure
+

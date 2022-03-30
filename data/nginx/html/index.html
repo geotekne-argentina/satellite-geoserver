@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://openlayers.org/en/v6.3.0/css/ol.css" type="text/css">
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+	<script src="https://openlayers.org/en/v6.3.0/build/ol.js" type="text/javascript"></script>
+	<style>
+
+	html,
+	body {
+	  height: 99.8%;
+	  width: 100%;
+	  padding: 0px;
+	  margin: 0px;
+	}
+
+	.map {
+	  height: 100%;
+	  width: 100%;
+	}
+
+	.dvContainer {
+	  position: relative;
+	  display: inline-block;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 10;
+	}
+
+	.dvInsideTL {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: -10;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="dvContainer">
+	  <table style="width:100%;height:10%;padding:10px">
+	    <tr>
+	      <td style="width:100%;text-align:right">
+		    <select id="layer-select">
+		       <option value="esa-eox" selected>Remote S2Maps</option>
+		       <option value="satellite-local">Local S2Maps</option>
+		     </select>
+	      </td>
+	    </tr>
+	  </table>
+	  <div class="dvInsideTL">
+	    <div id="map" class="map"></div>
+	  </div>
+	</div>
+
+    <script>
+
+const projection = ol.proj.get('EPSG:3857');
+const projectionExtent = projection.getExtent();
+const size = ol.extent.getWidth(projectionExtent) / 256;
+const resolutions = new Array(14);
+const matrixIds = new Array(14);
+for (let z = 0; z < 14; ++z) {
+  // generate resolutions and matrixIds arrays for this WMTS
+  resolutions[z] = size / Math.pow(2, z);
+  matrixIds[z] = z;
+}
+
+	const layers = [
+	  new ol.layer.Tile({
+              visible: false,
+	      name: 'esa-eox',
+	      source: new ol.source.WMTS({
+		attributions: 'Sentinel-2 cloudless - <a href="https://s2maps.eu">https://s2maps.eu</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2020)',
+		url: 'https://s2maps-tiles.eu/wmts',
+		layer: 's2cloudless-2020_3857',
+		matrixSet: 'GoogleMapsCompatible',
+		format: 'image/png',
+		projection: projection,
+		tileGrid: new ol.tilegrid.WMTS({
+		  origin: ol.extent.getTopLeft(projectionExtent),
+		  resolutions: resolutions,
+		  matrixIds: matrixIds,
+		}),
+		style: 'default',
+		wrapX: true,
+	       }),
+	  }),
+	  new ol.layer.Tile({
+            visible: false,
+	    name: 'satellite-local',
+	    source: new ol.source.TileWMS({
+              attributions: 'Local version - Sentinel-2 cloudless - <a href="https://s2maps.eu">https://s2maps.eu</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2020)',
+	      url: 'http://localhost:8080/geoserver/wms',
+	      params: {'LAYERS': 'geotekne:satellite-local', 'TILED': true},
+	      serverType: 'geoserver',
+	      transition: 0,
+	    })
+	  }),
+	];
+
+	const map = new ol.Map({
+	  layers: layers,
+	  target: 'map',
+	  view: new ol.View({
+	    center: ol.proj.fromLonLat([-0.12755, 51.507222]),
+	    zoom: 4,
+	  }),
+	});
+
+	const select = document.getElementById('layer-select');
+	function onChange() {
+	  const layername = select.value;
+	  for (let i = 0, ii = layers.length; i < ii; ++i) {
+	    layers[i].setVisible(layers[i].values_.name === layername);
+	  }
+	}
+	select.addEventListener('change', onChange);
+	onChange();
+      
+    </script>
+
+</body>
+</html>
