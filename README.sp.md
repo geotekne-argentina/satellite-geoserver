@@ -11,7 +11,9 @@ El ensamble que aqui se detalla se puede aplicar con diferentes fuentes de datos
 
 Los archivos GPKG utilizados para almacenar los tiles/teselas fueron recopilados utilizando [MapProxy](https://mapproxy.org/). 
 
+En la siguiente imagen se puede ver como funciona la aplicación de ejemplo, los mapas locales según distintos niveles (el area seleccionada para los niveles 11 a 15 es San Marino) y los mapas remotos funcionando con WMS.
 
+![showcase](./img/satellite-geoserver-optimized.gif)
 
 ## Pasos
 

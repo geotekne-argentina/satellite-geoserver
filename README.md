@@ -11,7 +11,9 @@ The assembly detailed here can be applied with different data sources. In our ca
 
 The GPKG files used to store the tiles were compiled using [MapProxy](https://mapproxy.org/).
 
+In next image you can see how sample app works, local base maps using different levels (selected area for levels 11 to 15 is San Marino) and remote maps working with WMS.
 
+![showcase](./img/satellite-geoserver-optimized.gif)
 
 ## Steps
 
