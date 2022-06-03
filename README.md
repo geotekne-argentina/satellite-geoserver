@@ -29,7 +29,7 @@ The steps are:
 
 2. Download the git repository of this project.
 
-   to. **git clone https://github.com/geotekne/satellite-geoserver.git**
+   to. **git clone https://github.com/geotekne-argentina/satellite-geoserver.git**
 
 3. Download the files corresponding to the mosaic datasets/raster tiles that will be used, executing the script **./setup-datasets.sh**
 

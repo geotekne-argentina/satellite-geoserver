@@ -29,7 +29,7 @@ Los pasos son:
 
 2. Descargar el repositorio git de este proyecto.
 
-   a. **git clone https://github.com/geotekne/satellite-geoserver.git**
+   a. **git clone https://github.com/geotekne-argentina/satellite-geoserver.git**
 
 3. Descargar los archivos correspondientes a los datasets de mosaicos/teselas raster que se utilizarán, ejecutando el script **./setup-datasets.sh**
 
