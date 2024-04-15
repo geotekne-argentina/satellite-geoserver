@@ -69,7 +69,7 @@ The steps are:
   - The base layer that is published in Geoserver is in turn made up of 2 layers originating from different Geopackage-type datastores. The catalog configuration in Geoserver is defined in such a way that only files with certain names should be replaced.
   - One of the Geopackages defines the tiles for levels 0 to 10 of global coverage (this will be recognized in the ./data/geoserver/data_dir/coverages/gpkg folder with the name global-0-10.gpkg), while the other (named selection-11-to-15.gpkg) contains the tiles for levels 11 to 15.
   - The setup-datasets.sh script downloads the file for global coverage at levels 0 to 10, and the selection of tiles at scale 11 to 15, in our case having selected the Republic of San Marino (because San Marino ? "perche mi piace San Marino, simplice")
-  - **Work in progress**: on this page https://geotekne-argentina.github.io/ the accesses to different GPKG for levels 11 to 15 (selections by country), as well as those of global scale and other resources will be published.
+  - **NEWS !!! (2024-04-15)**: download from [this page](https://link.storjshare.io/s/jv5m557e5rc2r5yjkl6o7zmfowba/satellite/) the different GPKG for levels 11 to 15 (selection by country, not all of them covered), as well as those of global scale (from 0 to 7 and to 10 levels)
   
   
 

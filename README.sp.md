@@ -69,7 +69,7 @@ Los pasos son:
   - La capa base que se publica en Geoserver se compone a su vez de 2 capas originadas en diferentes datastores de tipo Geopackage. La configuración del catalogo en Geoserver esta definida de forma tal que solo deben reemplazarse archivos con ciertos nombres.
   - Uno de los Geopackages define las teselas para los niveles 0 a 10 para cobertura global (este será reconocido en la carpeta ./data/geoserver/data_dir/coverages/gpkg con el nombre global-0-10.gpkg), en tanto que el otro (de nombre selection-11-to-15.gpkg) contiene las teselas para los niveles 11 a 15.
   - El script setup-datasets.sh hace la descarga del archivo para cobertura global en los niveles 0 a 10, y de la seleccion de teselas a escala 11 a 15, en nuestro caso habiendo seleccionado a la República de San Marino (porque San Marino ? "perche mi piace San Marino, semplice")
-  - **Trabajo en progreso**: en esta página https://geotekne-argentina.github.io/ se publicarán los accesos a diferentes GPKG para niveles 11 a 15 (selecciones por país), así como los de escala global y otros recursos.
+  - **Novedades !!! (2024-04-15)**: puedes descargar [de esta página](https://link.storjshare.io/s/jv5m557e5rc2r5yjkl6o7zmfowba/satellite/) los diferentes GPKG para niveles de zoom de 11 a 15 (seleccion por pais, aunque no todos disponibles), asi como los paquetes de escala global (de 0 a nivel 7 y a nivel 10)
 
   
 
