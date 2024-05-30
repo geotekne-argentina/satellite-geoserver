@@ -1,2 +1,0 @@
-This directory is meant to contain data, that it too large
-to fit into Git, and needs to be downladed separately.

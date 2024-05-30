@@ -1,0 +1,7 @@
+data/geoserver/data_dir/coverages/
+data/geoserver/data_dir/cluster/geoserver/
+data/geoserver/**/*.bak
+data/geoserver/**/*.orig
+data/geoserver/**/*.gpkg
+data/geoserver/**/*.zip
+data/geoserver/**/keepme.txt
